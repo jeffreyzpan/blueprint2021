@@ -13,6 +13,25 @@
 	position: absolute;
 	z-index: -1;
 }
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.user_data {
+  margin-top: 8em;
+  left: 0;
+}
+
+.results {
+  margin-top: 5em;
+  right: 0;
+}
+
 .inputfile + label {
     font-size: 1.25em;
     font-weight: 700;
@@ -67,12 +86,25 @@ window.addEventListener('load', function() {
   </div>
 </div>
 
-
+<div class="split user_data">
+<div class="centered"></div>
 <form method="post" enctype="multipart/form-data" action="/process">
   <input type="file" onchange="this.form.submit()" name="file" id="file" class="inputfile" >
   <!-- <input type="submit" value="Upload" class="inputfile"> -->
   <label for="file">Choose a file</label>
   <br><img id="myImg" src="#" width="300" />
+</div>
 </form>
+</div>
+
+<div class="split results"> 
+<div class="centered">
+  <ul>
+    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo aliquam, voluptatem eius autem dolorem, sit ea accusantium reprehenderit eveniet nulla praesentium dolor totam, beatae nemo vitae doloribus commodi rem maxime?</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo a necessitatibus et inventore magni sapiente vel saepe fugiat consectetur cupiditate. Deserunt accusamus harum ipsam voluptatibus maxime eaque explicabo autem nam.</li>
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perferendis molestiae veritatis eaque ullam? Explicabo omnis quia tempore cum? Consectetur dicta, expedita odio atque vero suscipit maiores velit earum aut!</li>
+  </ul>
+</div>
+</div>
 
 </body>
