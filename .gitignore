@@ -130,3 +130,9 @@ dmypy.json
 
 # pytorch binaries
 *.pth
+
+# swap
+*.swp
+
+# ctags
+tags
