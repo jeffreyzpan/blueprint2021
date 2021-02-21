@@ -17,7 +17,7 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET', 'POST'])
 def home(filename=None, bullets=None, captions=None):
-    if request.method == 'POST': 
+    if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
             flash('No file part')
@@ -36,7 +36,7 @@ def home(filename=None, bullets=None, captions=None):
 
         overall_desc = process(full_filename)
         bullets = overall_desc['bullets']
-        captions = overall_desc['captions']
+        captions = overall_desc['image_descs']
         # bullets = ['hi', 'this is a bullet', 'here is another bullet']
         # captions = ['hi', 'this is a caption', 'this is another caption']
 
