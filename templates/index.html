@@ -72,6 +72,7 @@ window.addEventListener('load', function() {
           img.src = URL.createObjectURL(this.files[0]); // set src to blob url
       }
   });
+
   document.getElementById("myDIV").style.display = "none";
 });
 </script>
@@ -88,7 +89,8 @@ window.addEventListener('load', function() {
 
 <div class="split user_data">
 <div class="centered"></div>
-<form method="post" enctype="multipart/form-data" action="/process">
+<iframe name="votar" style="display:none;"></iframe>
+<form method="post" enctype="multipart/form-data" action="/process" target="votar">
   <input type="file" onchange="this.form.submit()" name="file" id="file" class="inputfile" >
   <!-- <input type="submit" value="Upload" class="inputfile"> -->
   <label for="file">Choose a file</label>
