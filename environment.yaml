@@ -13,6 +13,7 @@ dependencies:
   - click=7.1.2=pyhd3eb1b0_0
   - cryptography=3.3.1=py38hbcfaee0_1
   - dataclasses=0.7=py38_0
+  - flask
   - filelock=3.0.12=pyhd3eb1b0_1
   - idna=2.10=pyhd3eb1b0_0
   - intel-openmp=2019.4=233
