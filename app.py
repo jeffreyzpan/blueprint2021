@@ -1,13 +1,14 @@
-import flask 
+import flask
+from flask import render_template
 from process import process
 
-app=flask.Flask(__name__)
+app=flask.Flask(__name__, template_folder='templates/')
 app.config["DEBUG"] = True
 
 
 @app.route('/', methods=['GET'])
 def home():
-    return "<h1>BLueprint Project</h1><p>hello world .</p>"
+    return render_template('index.html')
 
 @app.route('/', methods=['POST'])
 def image_captioning_function():
