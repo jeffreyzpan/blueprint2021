@@ -64,5 +64,3 @@ def process(image_path):
     overall_desc = {'bullets': summaries, 'image_descs': image_captions}
 
     return overall_desc
-
-process('/Users/jzpan/Desktop/test_imgs/test3.jpg')
