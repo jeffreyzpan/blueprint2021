@@ -8,6 +8,7 @@ def image_to_caption(image):
     '''
     OpenCV image -> str caption
     '''
+    os.chdir('image_captions')
     if not os.path.isdir('raw_images'):
         subprocess.call('mkdir raw_images', shell=True)
     cv2.imwrite('raw_images/image.jpg', image)
@@ -17,7 +18,6 @@ def image_to_caption(image):
     with open('ImageCaptions/vis/vis.json', 'r') as f:
         raw_result = json.load(f)
     subprocess.call('rm raw_images/image.jpg', shell=True)
+    os.chdir('..')
     return raw_result[0]['caption']
 
-test_image = cv2.imread('/Users/jzpan/Desktop/test_imgs/test.jpg', 1)
-print(image_to_caption(test_image))
