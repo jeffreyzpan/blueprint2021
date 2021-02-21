@@ -6,7 +6,11 @@ import json
 
 def image_to_caption(image):
     '''
-    OpenCV image -> str caption
+    OpenCV image -> str caption via an image captioning model
+    Args:
+        image (np.array / OpenCV image): input image to be captioned
+    Returns:
+        (str): caption
     '''
     os.chdir('image_captions')
     if not os.path.isdir('raw_images'):
