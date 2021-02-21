@@ -136,3 +136,6 @@ dmypy.json
 
 # ctags
 tags
+
+# uploads
+uploads/
