@@ -47,12 +47,13 @@ window.addEventListener('load', function() {
       if (this.files && this.files[0]) {
           var img = document.querySelector('img');
           img.onload = () => {
-              URL.revokeObjectURL(img.src);  // no longer needed, free memory
+              URL.revokeObjectURL(img.src);  
           }
 
           img.src = URL.createObjectURL(this.files[0]); // set src to blob url
       }
   });
+  document.getElementById("myDIV").style.display = "none";
 });
 </script>
 </head>
@@ -68,10 +69,10 @@ window.addEventListener('load', function() {
 
 
 <form method="post" enctype="multipart/form-data" action="/process">
-  <input type="file" name=file id="file" class="inputfile" >
-  <input type="submit" value="Upload" class="inputfile">
+  <input type="file" onchange="this.form.submit()" name="file" id="file" class="inputfile" >
+  <!-- <input type="submit" value="Upload" class="inputfile"> -->
   <label for="file">Choose a file</label>
-  <br><img id="myImg" src="#" width=300 />
+  <br><img id="myImg" src="#" width="300" />
 </form>
 
 </body>
